@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Conversion and Operation</title>
+</head>
+<body>
+    <h1>Binary Conversion and Operation</h1>
+    <form action="/binary-conversion" method="post">
+        <label for="binary_input1">Binary Input 1: </label>
+        <input type="text" id="binary_input1" name="binary_input1" required>
+
+        <label for="binary_input2">Binary Input 2: </label>
+        <input type="text" id="binary_input2" name="binary_input2" required>
+
+        <label for="operation">Select Operation: </label>
+        <select id="operation" name="operation" required>
+            <option value="addition">Addition</option>
+            <option value="subtraction">Subtraction</option>
+            <option value="Multiplication">Multiplication</option>
+            <option value="Division">Division</option>
+        </select>
+
+        <button type="submit">Perform Conversion</button>
+    </form>
+
+    {% if res %}
+        <h2>Conversion Result: </h2>
+        <p>{{ result }}</p>
+    {% endif %}
+
+</body>
+</html>
